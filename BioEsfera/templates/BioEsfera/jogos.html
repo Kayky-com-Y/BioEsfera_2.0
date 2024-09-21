@@ -1,0 +1,48 @@
+{% extends 'BioEsfera/base.html'%}
+{% load static %}
+{% block parte_central %}
+
+    <link rel="stylesheet" href="{% static 'css/jogo.css' %}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Lato:wght@300&family=Lexend:wght@700&family=Poppins:wght@500;800&family=Roboto:ital,wght@1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Lexend:wght@700&family=Poppins:wght@500;800&family=Roboto:ital,wght@1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+    <div id="espaçamento">
+      <div class="inicio"></div>
+      <p class="letreiros">{{jogo.titulo}}</p>
+      <div class="fim"></div>
+    </div>
+
+    <section>
+      <p class="texto">
+        <span class="texto_destaque">{{jogo.descricao}}
+      </p>
+
+      <iframe
+        width="1031"
+        height="581"
+        src={{jogo.url}}
+        title="DNA, ácidos nucleicos"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; cross-origin-isolated"
+        allowfullscreen
+        Cross-Origin-Embedder-Policy: require-corp
+      ></iframe>
+
+      <p class="subtexto">
+        Jogo feito em Godot e codigos disponiveis em
+      </p>
+      <p class="subtexto">github.com/Kayky-com-Y/DNA_Bioesfera</p>
+    </section>
+    <script src="{% static 'javascript/botao_navegar.js' %}"></script>
+
+{% endblock %}

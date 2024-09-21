@@ -1,0 +1,85 @@
+{% extends 'BioEsfera/base.html'%}
+{% load static %}
+{% block parte_central %}
+    <link rel="stylesheet" href="{% static 'css/jornada.css' %}" />
+    <main>
+      {% for jogo in jogos %}
+        <div id="jornada">
+          <img src="{% static 'SVG/trilha.svg' %}" alt="" id="trilha" />
+          <button class="botaoComImagem" id="botaoFase0">
+            <img src="{% static 'SVG/fase0.svg' %}" alt="" />
+          </button>
+          <div id="modal0" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>{{jogo.titulo}}</h2>
+              <img
+                src="{% static 'SVG/barraPorcentagem.svg' %}"
+                alt=""
+                style="margin: 2vh 0"
+              />
+              <img src="{% static 'SVG/infoFase.svg' %}" alt="" />
+              <div id="plays">
+                <section>
+                  <button
+                    class="botaoComImagem btn-navegacao"
+                    data-destino="{% url 'jogos' jogo.id %}"
+                  >
+                    <img src="{% static 'SVG/playBtn.svg' %}" alt="" class="play" />
+                  </button>
+                  <p>Jogo</p>
+                </section>
+              </div>
+            </div>
+          </div>
+          <button class="botaoComImagem" id="botaoFase1">
+            <img src="{% static 'SVG/fase1.svg' %}" alt="" />
+          </button>
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>1: Fotossíntese</h2>
+              <img
+                src="{% static 'SVG/barraPorcentagem.svg' %}"
+                alt=""
+                style="margin: 2vh 0"
+              />
+              <img src="{% static 'SVG/infoFase.svg' %}" alt="" />
+              <div id="plays">
+                <section>
+                  <button
+                    class="botaoComImagem btn-navegacao"
+                    data-destino="404.html"
+                  >
+                    <img src="{% static 'SVG/playBtn.svg' %}" alt="" class="play" />
+                  </button>
+                  <p>Jogo</p>
+                </section>
+              </div>
+            </div>
+          </div>
+          <img
+            src="{% static 'SVG/arbusto3.svg' %}"
+            alt=""
+            id="arbusto1"
+            class="arbusto"
+          />
+          <img
+            src="{% static 'SVG/arbusto2.svg' %}"
+            alt=""
+            id="arbusto2"
+            class="arbusto"
+          />
+          <img
+            src="{% static 'SVG/arbusto1.svg' %}"
+            alt=""
+            class="arbusto"
+            id="arbusto3"
+          />
+        </div>
+      {% endfor %}
+    </main>
+    <script src="{% static 'javascript/btnCadastro.js' %}"></script>
+    <script src="{% static 'javascript/ativarModal.js' %}"></script>
+    <script src="{% static 'javascript/botao_navegar.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,190 @@
+:root {
+  --lite_green: #979a2b;
+  --slime_green: #878c26;
+  --dark_green: #454d11;
+  --yellow: #eeb153;
+  --lite_yellow: #febd59;
+  --lite_orange: #eb8f32;
+  --orange: #c16100;
+  --past_orange: #ba5f04;
+  --dark_orange: #834105;
+}
+
+body {
+  background-color: var(--lite_green);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+::selection {
+  color: var(--past_orange);
+  background: var(--lite_yellow);
+}
+
+section {
+  background-color: var(--dark_green);
+  width: 1191px;
+  height: 5450px;
+  margin: auto;
+  padding-top: 149px;
+}
+
+.inicio {
+  height: 29px;
+  border-bottom: 2px;
+  border-bottom-style: dashed;
+  border-color: var(--lite_green);
+  width: 189px;
+}
+.letreiros {
+  font-family: Poppins;
+  font-weight: 800;
+  color: var(--lite_green);
+  font-size: 39px;
+  margin: 0;
+  display: block;
+  background-color: var(--dark_green);
+  z-index: 1;
+}
+.fim {
+  height: 29px;
+  border-bottom: 2px;
+  border-bottom-style: dashed;
+  border-color: var(--lite_green);
+  width: 1190px;
+  position: absolute;
+}
+
+.espaçamento {
+  display: flex;
+  justify-content: first baseline;
+  align-items: flex-start;
+  height: 59px;
+}
+
+.aulas {
+  width: 217px;
+  border: 2px;
+  border-radius: 25px;
+  border-style: solid;
+  padding: 10px 20px;
+  border-color: var(--past_orange);
+  background-color: var(--dark_green);
+  margin: 0 20.5px 41px 20.5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.numeracao {
+  font-family: Poppins;
+  color: var(--past_orange);
+  font-size: 21px;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+}
+
+.titulinho {
+  font-family: Poppins;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  text-align: left;
+}
+
+.regiaoAulas {
+  margin: 40px 79px 45px 79px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
+  section {
+    background-color: var(--dark_green);
+    width: 100vw;
+    height: auto;
+    margin: auto;
+    padding-top: 149px;
+  }
+
+  .inicio {
+    height: 29px;
+    border-bottom: 2px;
+    border-bottom-style: dashed;
+    border-color: var(--lite_green);
+    width: 4vw;
+    margin-right: 1vw;
+  }
+  .letreiros {
+    font-family: Poppins;
+    font-weight: 800;
+    color: var(--lite_green);
+    font-size: 24px;
+    margin: 0;
+    display: flex;
+    background-color: var(--dark_green);
+    z-index: 1;
+    justify-content: end;
+  }
+  .fim {
+    height: 29px;
+    border-bottom: 2px;
+    border-bottom-style: dashed;
+    border-color: var(--lite_green);
+    width: 80vw;
+    position: absolute;
+    right: 0;
+  }
+
+  .espaçamento {
+    display: flex;
+    flex-direction: row;
+    justify-content: first baseline;
+    align-items: flex-start;
+    height: 59px;
+  }
+
+  .aulas {
+    width: 44vw;
+    min-height: 20vh;
+    border: 2px;
+    border-radius: 25px;
+    border-style: solid;
+    padding: 10px 20px;
+    margin: 6vw 2vw;
+    border-color: var(--past_orange);
+    background-color: var(--dark_green);
+    display: flex;
+  }
+
+  .numeracao {
+    font-family: Poppins;
+    color: var(--past_orange);
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+  }
+
+  .titulinho {
+    font-family: Poppins;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    text-align: left;
+  }
+
+  .regiaoAulas {
+    margin: 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

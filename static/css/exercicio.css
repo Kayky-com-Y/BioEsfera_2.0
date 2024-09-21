@@ -1,0 +1,149 @@
+:root {
+    --lite_green: #979a2b;
+    --slime_green: #878c26;
+    --dark_green: #454d11;
+    --yellow: #eeb153;
+    --lite_yellow: #febd59;
+    --lite_orange: #eb8f32;
+    --orange: #c16100;
+    --past_orange: #ba5f04;
+    --dark_orange: #834105;
+  }
+
+body {
+  background-color: var(--dark_green);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.exercicio {
+  width: 990px;
+  margin: auto;
+}
+
+.titulo {
+  width: 1440px;
+  margin: auto;
+}
+
+::selection {
+  color: var(--past_orange);
+  background: var(--lite_yellow);
+}
+
+.inicio {
+  height: 29px;
+  border-bottom: 2px;
+  border-bottom-style: dashed;
+  border-color: var(--lite_green);
+  width: 176px;
+}
+.letreiros {
+  font-family: Poppins;
+  font-weight: 800;
+  color: var(--lite_green);
+  font-size: 39px;
+  margin: 0;
+  display: block;
+  background-color: var(--dark_green);
+  z-index: 1;
+}
+.fim {
+  height: 29px;
+  border-bottom: 2px;
+  border-bottom-style: dashed;
+  border-color: var(--lite_green);
+  width: 1447px;
+  position: absolute;
+}
+
+#espaçamento {
+  display: flex;
+  justify-content: first baseline;
+  align-items: flex-start;
+  height: 59px;
+  margin-top: 124px;
+}
+
+.questao {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.opclabel {
+  color: #fff;
+  font-family: Lato;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 253.8%;
+  display: flex;
+  align-items:flex-start;
+  line-height: 6vh;
+}
+.opclabel input{
+  margin-top: 2vh;
+}
+
+.radio {
+  width: 32px;
+  height: 20px;
+  
+}
+
+.regiaoQuestao {
+  margin-bottom: 65px;
+}
+
+.bvoltar {
+  color: #fff;
+  border-radius: 14px;
+  border: 2px solid var(--lite_yellow);
+  background: var(--dark_green);
+  width: 246px;
+  height: 58px;
+  padding: 3px 23px;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.bChecarRespostas {
+  color: var(--dark_green);
+  border-radius: 14px;
+  background-color: var(--lite_yellow);
+  border: 2px solid var(--dark_green);
+  width: 246px;
+  height: 58px;
+  padding: 3px 23px;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.botões {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  gap: 24px;
+  margin-bottom: 174px;
+}
+.mensagemFeedback {
+  color: var(--yellow);
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}

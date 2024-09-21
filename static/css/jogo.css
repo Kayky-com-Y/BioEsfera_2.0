@@ -1,0 +1,120 @@
+:root {
+  --lite_green: #979a2b;
+  --slime_green: #878c26;
+  --dark_green: #454d11;
+  --yellow: #eeb153;
+  --lite_yellow: #febd59;
+  --lite_orange: #eb8f32;
+  --orange: #c16100;
+  --past_orange: #ba5f04;
+  --dark_orange: #834105;
+}
+
+body {
+  background-color: var(--dark_green);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+section {
+  width: 991px;
+  margin: auto;
+  text-align: center;
+  height: 1277px;
+}
+
+::selection {
+  color: var(--past_orange);
+  background: var(--lite_yellow);
+}
+
+.inicio {
+  height: 29px;
+  border-bottom: 2px;
+  border-bottom-style: dashed;
+  border-color: var(--lite_green);
+  width: 176px;
+}
+.letreiros {
+  font-family: Poppins;
+  font-weight: 800;
+  color: var(--lite_green);
+  font-size: 39px;
+  margin: 0;
+  display: block;
+  background-color: var(--dark_green);
+  z-index: 1;
+}
+.fim {
+  height: 29px;
+  border-bottom: 2px;
+  border-bottom-style: dashed;
+  border-color: var(--lite_green);
+  width: 100%;
+  position: absolute;
+}
+
+#espaçamento {
+  display: flex;
+  justify-content: first baseline;
+  align-items: flex-start;
+  height: 59px;
+  margin-top: 124px;
+}
+
+.texto_destaque {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 21px;
+}
+
+.texto {
+  color: #fff;
+  font-family: Lato;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: left;
+  margin: 30px 0 50px 0;
+}
+
+.subtexto {
+  color: var(--lite_green);
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: right;
+  padding-right: 90px;
+  margin: 0;
+}
+
+iframe {
+  border-radius: 41px;
+  border-radius: 41px;
+  border: 5px solid var(--past_orange);
+  background-color: var(--lite_yellow);
+  padding: 4px;
+}
+
+.bExercicio {
+  color: #fff;
+  border-radius: 14px;
+  border: 2px solid var(--lite_yellow);
+  background: var(--dark_green);
+  width: 246px;
+  height: 58px;
+  padding: 3px 23px;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: block;
+  margin: 66px 0 0 750px;
+  z-index: 3;
+}

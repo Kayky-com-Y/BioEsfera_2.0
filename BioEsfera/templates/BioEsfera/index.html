@@ -1,0 +1,127 @@
+{% extends 'BioEsfera/base.html'%}
+{% load static %}
+{% block parte_central %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <main>
+      <div>
+        <img src="{% static '/images/fundo_elefantes.png' %}" alt="" id="fundo-image" />
+        <img src="{% static '/SVG/HEADLINE.svg' %}" alt="" id="headline" />
+        <img src="{% static '/SVG/BIOESFERA_verdo.svg' %}" alt="" id="Biosfera-text" />
+        <img
+          src="{% static '/images/bixins-do-elefante.png' %}"
+          alt=""
+          id="bixins-elefante"
+        />
+      </div>
+      <div class="c0">
+        <p class="text-0">
+          Estude <span>biologia básica</span> através de <span>jogos!</span> Aqui você encontra
+          <span>conteúdos exclusivos</span> criados para um aprendizado
+          <span>eficiente</span> e <span>alto astral</span>.
+        </p>
+        <button id="Btn_cadastro">Cadastre-se</button>
+      </div>
+      <div class="c2">
+        <img src="{% static '/SVG/medalhão_metodologia.svg' %}" alt="" />
+        <div class="text-block">
+          <h2 class="title-2">Metodologia</h2>
+          <p class="text-2">
+            Nossa plataforma dispõe de diversos
+            <span>conteúdos de biologia básica</span> em forma de
+            <span
+              >jogos
+              interativos</span
+            >
+            que te ajudam a fixar a matéria de forma prática e divertida!
+            <span>Navegue</span> pelos materiais disponibilizados.
+          </p>
+        </div>
+      </div>
+      <div class="c1">
+        <div id="bloco-esq">
+          <img src="{% static '/SVG/medalhão_jornada.svg' %}" alt="" />
+          <div class="text-block">
+            <h2 class="title-1">Trilha</h2>
+            <p class="text-1">
+              Aqui preparamos uma <span>trilha de conhecimentos</span> onde,
+              atravéz do tema
+              <span>"sucessão ecológica"</span>
+              te guiaremos por
+              <span>diversas matérias de biologia básica</span>. Você se
+              encontrará em uma verdadeira <span> jornada!</span>
+            </p>
+          </div>
+        </div>
+        <div id="bloco-dir">
+          <img src="{% static '/SVG/medalhão_organizacao.svg' %}" alt="" />
+          <div class="text-block">
+            <h2 class="title-1">Organização</h2>
+            <p class="text-1">
+              <span>Organize-se </span>para se aventurar na sua
+              <span>jornada</span> e tenha um
+              <span>aprendizado espetacular</span>. Otmizando seu
+              <span>tempo</span> você conseguirá
+              <span>aproveitar todos os jogos</span> e terá uma
+              experiência única!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="c2" id="c2-reverso">
+        <img src="{% static 'SVG/medalhão_conquistas.svg' %}" alt="" />
+        <div class="text-block">
+          <h2 class="title-2">Conquistas</h2>
+          <p class="text-2">
+            Trabalhamos aqui com um sistema de
+            <span>conquistas</span>, que são alcançadas como
+            <span>recompensas</span>
+            após realizar um feito notável. Estas conquistas, além de te darem
+            motivos para se gabar, podem
+            <span> desbloquear páginas específicas </span> com interações
+            especiais.
+          </p>
+        </div>
+      </div>
+      <div class="c0">
+        <img
+          src="{% static '/SVG/medalhão_metodologia.svg' %}"
+          alt=""
+          id="c0_img-1"
+          class="c0_img"
+        />
+        <img
+          src="{% static '/SVG/medalhão_jornada.svg' %}"
+          alt=""
+          id="c0_img-2"
+          class="c0_img"
+        />
+        <img
+          src="{% static '/SVG/medalhão_organizacao.svg' %}"
+          alt=""
+          id="c0_img-3"
+          class="c0_img"
+        />
+        <img
+          src="{% static '/SVG/medalhão_conquistas.svg' %}"
+          alt=""
+          id="c0_img-4"
+          class="c0_img"
+        />
+        <p class="text-0">
+          Agora que você está familiarizado com as principais funcionalidades do
+          site, é hora de <span>explorar</span> e se
+          <span>divertir do seu jeito!</span> Com todos estes recursos ao seu
+          alcance, você pode <span>mergulhar em um mar de informações</span>,
+          descobertas e interações cativantes.
+          <span>Deixe sua curiosidade guiá-lo</span> por caminhos inexplorados,
+          <span>inspire-se</span> com conteúdos diversos e
+          <span>aproveite</span> ao máximo todas as ferramentas disponíveis.
+          <span>Este é o seu espaço</span> para aprender, então divirta-se e
+          <span>desfrute de tudo o que este site tem a oferecer!</span>
+        </p>
+        <img src="{% static '/SVG/LOGO _laranja2.svg' %}" alt="" />
+      </div>
+    </main>
+    <script src="{% static 'javascript/btnCadastro.js' %}"></script>
+
+{% endblock %}

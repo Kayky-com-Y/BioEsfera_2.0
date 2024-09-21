@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="{% static '/images/PBioEsfera.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/general.css' %}" />
+</head>
+<body>
+    <header>
+        <a href="{% url 'index' %}"><img src="{% static 'images/LOGO.png' %}" alt="" /></a>
+        <nav>
+          <ul>
+            <li><a href="{% url 'index' %}">Início</a></li>
+            <li><a href="404.html">Conquistas</a></li>
+            <li><a href="conteudos.html">Conteúdos</a></li>
+            <li><a href="{% url 'jornada' %}">Jornada</a></li>
+            <li><a href="404.html">Meu perfil</a></li>
+            <li><a href="{% url 'Sobrenos' %}">Sobre nós</a></li>
+          </ul>
+        </nav>
+        <div id="btnsH">
+          <button id="Btn1">Cadastre-se</button>
+          <button id="Btn2">Entrar</button>
+        </div>
+      </header>
+
+      {% block parte_central %}
+
+      {% endblock %}
+
+      <footer>
+        <div id="borderFoo">
+          <img src="{% static '/images/LOGO2.png' %}" alt="" />
+        </div>
+        <div id="listFoo">
+          <ul>
+            <li><a href="{% url 'Sobrenos' %}">Sobre nós</a></li>
+            <li><a href="">Contatos</a></li>
+            <li><a href="Mailto:feedbackobioesfera@gmail.com">Feedback</a></li>
+            <li><a href="">Sobre Projeto</a></li>
+            <li><a href="">Redes Sociais</a></li>
+          </ul>
+        </div>
+      </footer>
+</body>
+</html>

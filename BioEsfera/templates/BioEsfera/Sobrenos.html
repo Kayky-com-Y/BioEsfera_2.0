@@ -1,0 +1,177 @@
+{% extends 'BioEsfera/base.html'%}
+{% load static %}
+{% block parte_central %}
+    <link rel="stylesheet" href="{% static 'css/sobrenos.css' %}" />
+    <main>
+      <div id="detalheSuperior">
+        <img src="{% static 'SVG/Group 97.svg' %}" alt="" />
+        <h2>Sobre Nós</h2>
+      </div>
+      <div id="conteiner_detalheTrilha">
+        <img src="{% static 'SVG/detalheDeTrilha.svg' %}" alt="" id="detalheTrilha" />
+
+        <div class="lados ladoEsquerdo">
+          <img src="{% static 'SVG/BIOESFERA_laranja.svg' %}" alt="" id="nameBio" />
+          <div class="conteiner-person">
+            <img src="{% static 'SVG/photografh.svg' %}" alt="" class="back-img" />
+            <img src="{% static 'images/Guilherme.png' %}" alt="" class="person" />
+            <img
+              src="{% static 'SVG/arbusto1.svg' %}"
+              alt=""
+              class="detalhe-arbustos"
+            />
+          </div>
+          <div class="conteiner-text">
+            <h2 class="titulo-esq">Guilherme</h2>
+
+            <p class="texto-esq">
+              <span> Guilherme Vieira de Souza </span>
+              é um estudante do curso de <span> informática </span> no Instituto
+              Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte
+              <span>(IFRN) em Pau dos Ferros</span>. Nascido em
+              <span>Iracema, Ceará, em 2005</span>
+              , se mudou para
+              <span>Rodolfo Fernandes</span> após a 5ª série e estudou na escola
+              Maria de Lourdes Cavalcante antes de ingressar no IFRN. Sua paixão
+              é <span>programação</span> .
+            </p>
+          </div>
+        </div>
+        <div class="lados ladoDireito">
+          <div class="conteiner-person">
+            <img src="{% static 'SVG/photografh.svg' %}" alt="" class="back-img" />
+            <img src="{% static 'images/Kayky.png' %}" alt="" class="person" />
+            <img
+              src="{% static 'SVG/arbusto2.svg' %}"
+              alt=""
+              class="detalhe-arbustos"
+            />
+          </div>
+          <div class="conteiner-text">
+            <h2 class="titulo-dir">Kayky</h2>
+            <p class="texto-dir">
+              <span>Kayky da Silva Batista</span>
+              nasceu em
+              <span>21 de setembro de 2004</span> em
+              <span>Antônio Martins</span>. Sua infância foi marcada por
+              <span>jogos onlines</span> que o influenciaram a seguir na
+              <span>área de informática</span> no IFRN. Atualmente ele cursa o
+              <span> terceiro ano de informática</span> no do campus Pau dos
+              Ferros
+            </p>
+          </div>
+        </div>
+
+        <div class="lados ladoEsquerdo">
+          <div class="conteiner-person">
+            <img src="{% static 'SVG/photografh.svg' %}" alt="" class="back-img" />
+            <img src="{% static 'images/Matheus.png' %}" alt="" class="person" />
+            <img
+              src="{% static 'SVG/arbusto3.svg' %}"
+              alt=""
+              class="detalhe-arbustos"
+            />
+          </div>
+          <div class="conteiner-text">
+            <h2 class="titulo-esq">Matheus</h2>
+            <p class="texto-esq">
+              <span>Matheus Rodrigues Oliveira</span> nasceu no dia
+              <span>20 de abril de 2005 em Pau dos Ferros/RN</span> . Sua
+              infância, assim como a de muitos, foi marcada pelos mais diversos
+              <span>jogos</span>, porém seu interesse ia além do simples jogo;
+              <span
+                >Matheus se atraía pelos gráficos, os visuais, as mecânicas e
+                lógicas</span
+              >. Hoje Matheus cursa <span>informática no IFRN</span> e tem como
+              <span>hobbie desenhar</span>. Ele encontrou no inocente encanto
+              por gráficos de jogos uma <span>arte</span> e na curiosidade por o
+              que tem por trás deles uma possível <span>carreira</span>.
+            </p>
+          </div>
+        </div>
+
+        <div class="lados ladoDireito">
+          <div class="conteiner-person">
+            <img src="{% static 'SVG/photografh.svg' %}" alt="" class="back-img" />
+            <img src="{% static 'images/Raquel.png' %}" alt="" class="person" />
+            <img
+              src="{% static 'SVG/arbusto4.svg' %}"
+              alt=""
+              class="detalhe-arbustos"
+            />
+          </div>
+          <div class="conteiner-text">
+            <h2 class="titulo-dir">Raquel</h2>
+            <p class="texto-dir">
+              <span>Raquel Carlos</span> nasceu no
+              <span>dia 19 de junho de 2005</span>, é natural da cidade de
+              <span>Frutuoso-Gomes- RN</span> e reside lá até os dias atuais.
+              Foi na cidadezinha de pouco mais de 5 mil habitantes que Raquel
+              <span>aprendeu tudo que sabe hoje</span>, criou
+              <span></span>memórias e desenvolveu sua paixão pelo
+              <span>cinema</span> e pela <span>música</span>. No presente cursa
+              <span>informática no IFRN- campus Pau dos ferros.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="lados ladoEsquerdo">
+          <div class="conteiner-person">
+            <img src="{% static 'SVG/photografh.svg' %}" alt="" class="back-img" />
+            <img src="{% static 'images/Victoria.png' %}" alt="" class="person" />
+            <img
+              src="{% static 'SVG/arbusto5.svg' %}"
+              alt=""
+              class="detalhe-arbustos"
+            />
+          </div>
+          <div class="conteiner-text">
+            <h2 class="titulo-esq">Victória</h2>
+            <p class="texto-esq">
+              <span>Victória Silvina Gonçalves</span> é natural de
+              <span>Pau dos Ferros, RN</span>. Atualmente cursa o
+              <span>2° grau pelo IFRN-PF</span> na área da <span>TI</span>. Atua
+              com crianças na igreja que congrega (Assembléia de Deus), como
+              <span></span>professora e regente de conjunto. É completamente
+              apaixonada por <span>música</span>, e por
+              <span>instrumentos musicais</span>. Ama LIBRAS, mas ainda não sabe
+              falar.
+            </p>
+          </div>
+        </div>
+        <div class="lados ladoDireito">
+          <div class="conteiner-person">
+            <img src="{% static 'SVG/photografh.svg' %}" alt="" class="back-img" />
+            <img src="{% static 'images/Vivian.png' %}" alt="" class="person" />
+            <img
+              src="{% static 'SVG/arbusto6.svg' %}"
+              alt=""
+              class="detalhe-arbustos"
+            />
+          </div>
+          <div class="conteiner-text">
+            <h2 class="titulo-dir">Vivian</h2>
+            <p class="texto-dir">
+              <span>Vivian Silvina Gonçalves nasceu</span> em <span>2006</span>,
+              em <span>Pau dos Ferros/RN</span>. Aluna dedicada que gosta muito
+              de <span>matemática, literatura de cordel, músicas, jogos</span>,
+              etc. Além disso, faz o curso de
+              <span>informática pelo IFRN - Campus Pau dos Ferros</span>. Na
+              igreja é regente e <span>professora do conjunto infantil</span>. É
+              muito <span>curiosa</span>, e espera que essa curiosidade, junto
+              com sua garra, a ajude a realizar seus
+              <span>sonhos e desejos</span>.
+            </p>
+          </div>
+        </div>
+        <img
+          src="{% static 'images/LOGO Verde.png' %}"
+          alt=""
+          style="width: 25%; position: absolute; left: 40%"
+        />
+        <div id="detalheInferior">
+          <img src="{% static 'SVG/Group 97.svg' %}" alt="" />
+        </div>
+      </div>
+    </main>
+{% endblock %}
