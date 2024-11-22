@@ -183,7 +183,7 @@ body {
     background: var(--dark_green);
     border-width: 1px;
     border-color: var(--past_orange);
-    width: 70px;
+    width: 90px;
     height: 22px;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
   }

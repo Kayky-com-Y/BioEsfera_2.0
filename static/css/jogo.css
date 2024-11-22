@@ -9,7 +9,6 @@
   --past_orange: #ba5f04;
   --dark_orange: #834105;
 }
-
 body {
   background-color: var(--dark_green);
   margin: 0;

@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from BioEsfera.views import index,sobre_nos,jornada,jogos,perfil
+from BioEsfera.views import index,sobre_nos,jornada,jogos,perfil,cadastro,login_view,logout_view,atualizar_titulo_conquista, atualizar_avatar_usuario
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -27,7 +27,13 @@ urlpatterns = [
     path('jornada/', jornada, name='jornada'),
     path('jornada/<int:jogo_id>', jogos, name='jogos'),
     path('perfil/', perfil, name='perfil'),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
+    path('cadastro/', cadastro, name='cadastro'),
+    path('atualizar_titulo_conquista/<int:conquista_id>/', atualizar_titulo_conquista, name='atualizar_titulo_conquista'),
+    path('atualizar_avatar/<int:avatar_id>/', atualizar_avatar_usuario, name='atualizar_avatar'),
 ]
+app_name = 'BioEsfera'
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

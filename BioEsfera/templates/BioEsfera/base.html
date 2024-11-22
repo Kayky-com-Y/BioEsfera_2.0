@@ -18,13 +18,14 @@
             <li><a href="404.html">Conquistas</a></li>
             <li><a href="conteudos.html">Conteúdos</a></li>
             <li><a href="{% url 'jornada' %}">Jornada</a></li>
-            <li><a href="404.html">Meu perfil</a></li>
+            <li><a href="{% url 'perfil' %}">Meu perfil</a></li>
             <li><a href="{% url 'Sobrenos' %}">Sobre nós</a></li>
           </ul>
         </nav>
         <div id="btnsH">
-          <button id="Btn1">Cadastre-se</button>
-          <button id="Btn2">Entrar</button>
+          <a id="Btn1" href="{% url 'cadastro' %}">Cadastre-se</a>
+          <a id="Btn2" href="{% url 'login'%}">Entrar</a>
+
         </div>
       </header>
 

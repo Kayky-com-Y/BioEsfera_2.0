@@ -1,0 +1,233 @@
+
+body{
+    background-color: rgb(151, 154, 43);
+    padding: 0;
+    margin: 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+.div_central{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    height: 1025px;
+    width: 1000px;
+    background-color: rgb(186, 95, 4);
+    border-radius: 73px;
+}
+
+.div_titulo{
+    background-color: rgb(254, 189, 89);
+    height: 40px;
+    width: 200px;
+    border-radius: 9px;
+    margin-left: 10px;
+}
+
+.div_cabecalho{
+    padding-top: 80px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 235px;
+    width: 810px;
+    background-color: rgb(186, 95, 4);
+}
+.div_img{
+    width: 195px;
+    height: 195px;
+    display: block;
+}
+
+.div_modificar{
+    display: block;
+    width: 242px;
+    height: 130;
+    margin-left: auto;
+}
+.div_atualizar{
+    margin-top: 50px;
+    width: 242px;
+    height: 56px;
+}
+.div_sair{
+    margin-top: 30px;
+    width: 242px;
+    height: 56px;
+}
+
+.div_borderFoo {
+    margin: 0vw 5vw 0 5vw;
+    border-bottom: 0.5vh dashed white;
+    display: block;
+  }
+
+.div_informacoes{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    height: 640px;
+    width: 910px;
+    background-color: rgb(129, 69, 7);
+    border-radius: 42px;
+}
+
+.div_conquistas{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 34px;
+    height: 180px;
+    width: 810px;
+    background-color: rgb(129, 69, 7);
+    border-radius: 25px;
+    border: 1px solid rgb(186, 95, 4)
+}
+.div_conquistas_cabecalho{
+    display: flex;
+    height: 182px;
+}
+
+.div_inferior{
+    display: flex;
+}
+
+.div_calendario{
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 335px;
+    height: 280px;
+    border-radius: 37px;
+    background-color: rgb(186, 95, 4);
+}
+
+.div_avatar{
+    margin-top: 30px;
+    margin-left: 150px;
+    background-color: rgb(151, 154, 43);
+    width: 325px;
+    height: 285px;
+    border-radius: 37px;
+}
+
+.a_atualizar{
+    padding: 22px 76px;
+    background-color: rgb(151, 154, 43);
+    border-radius: 7px;
+}
+
+.a_sair{
+    padding: 22px 102.5px;
+    border-radius: 7px; 
+    background-color: rgb(177, 61, 24);
+}
+
+.img_local{
+    width: 195px;
+    height: 195px;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.img_usuario{
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    position: absolute;
+    margin-top: 32px;
+    margin-left: 32.5px;
+}
+.img_conquistas{
+    display: flex;
+    padding: 15px;
+    height: 54px;
+    width: 54px;
+}
+
+.img_medalha{
+    width: 54px;
+    height: 54px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.img_anterior{
+    padding-left: 18px;
+    padding-bottom: 90px;
+}
+
+.img_avatar{
+    padding-left: 25px;
+    padding-top: 30px;
+}
+
+.img_posterior{
+    padding-left: 25px;
+    padding-bottom: 90px;
+}
+
+.p_titulo{
+    color: rgb(186, 95, 4);
+    font-size: 21px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.p_nome{
+    color: white;
+    font-size: 39px;
+    font-weight: Bold;
+    margin: 0px;
+    margin-left: 10px;
+}
+
+.p_nome_real{
+    color: rgb(129, 69, 7);
+    font-weight: Bold;
+    font-size: 25px;
+    margin: 0px;
+    margin-left: 10px;
+}
+
+.p_email{
+    color: rgb(129, 69, 7);
+    font-size: 21px;
+    margin: 0px;
+    margin-left: 10px;
+}
+
+.p_informacoes{
+    padding: 5px;
+    padding-top: 30px;
+    padding-left: 70px;
+    font-size: 24px;
+    font-weight: Bold;
+    color: white;
+}
+
+.p_conquistas{
+    margin-top: 5px;
+    margin-right: 0;
+    display: flex;
+    color: rgb(186, 95, 4);
+    font-size: 21px;
+}
+
+#Btn1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+#Btn2 {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
