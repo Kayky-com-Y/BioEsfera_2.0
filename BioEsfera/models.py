@@ -3,12 +3,12 @@ from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 class Usuario(AbstractUser):
-    SEXO_CHOICES = [ ('F','Feminino'), ('M','Masculino'), ('O','Outros'), ('N','Prefiro não dizer')]
-    email = models.EmailField(max_length=150)
-    idade = models.IntegerField(null=True)
-    sexo = models.CharField(max_length=150, choices=SEXO_CHOICES, blank=True)
-    titulo_conquista = models.CharField(max_length=150, blank=True, null=True)
-    avatar = models.ImageField(upload_to='images/', null=True, blank=True)
+    email = models.EmailField(max_length=150, default='Coloque_o_seu_email@email.com')
+    idade = models.IntegerField(null=True, default= 18)
+    sexo = models.CharField(max_length=150, blank=True, default="Outros")
+    titulo_conquista = models.CharField(max_length=150, blank=True, null=True, default="Novato")
+    descricao_conquista = models.CharField(max_length=150, blank=True, null=True, default="Aperte em uma conquista que você ganhou e vejá o que acontece ;)")
+    avatar = models.ImageField(upload_to='images/', null=True, blank=True, default='images/cebolo_perfil.png')
 
 
     def __str__(self):
@@ -26,6 +26,7 @@ class Jogo(models.Model):
 class Conquista(models.Model):
     titulo = models.CharField(max_length=150,  unique=True)
     descricao = models.TextField(max_length=1000)
+    dica = models.TextField(max_length=1000)
     imagem = models.ImageField(upload_to='images/', null=True, blank= True)
     jogo = models.ForeignKey(Jogo, on_delete=models.CASCADE)
 
@@ -38,9 +39,13 @@ class Conquista_Usuario(models.Model):
 
     def __str__(self):
         return f'{self.usuario.username} - {self.conquista.titulo}'
+
+    class Meta: 
+        unique_together = ('usuario', 'conquista')
     
 class Imagem_avatar(models.Model):
     imagem = models.ImageField(upload_to='images/')
+    usuario_imagem = models.ImageField(upload_to='images/')
 
     def __str__(self):
         return f'Avatar {self.id}'

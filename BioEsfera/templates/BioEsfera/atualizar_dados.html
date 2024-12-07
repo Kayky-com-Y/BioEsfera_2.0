@@ -18,11 +18,10 @@
 
         <form method="POST" id="cadastrarForm">
           {% csrf_token %}
-          {{ form.non_field_errors }}
           <div class="linha">
               <div class="label-input" style="flex:5;">
-                <label for="username">Nome de usuário*:</label>
-                {{ form.username }}
+                <label for="username">nome de usuario*:</label>
+                <input type="text" name="username" id="username" class="textInput" maxlength="11" value="{{ user.username }}" required>
                 {% if form.username.errors %}
                     <div class="text-danger">
                         {{ form.username.errors.0 }}
@@ -31,7 +30,7 @@
               </div>
               <div class="label-input" style="flex:5;">
                 <label for="email">E-mail:</label>
-                {{ form.email }}
+                <input type="email" name="email" id="email" class="textInput" value="{{ user.email }}" required>
                 {% if form.email.errors %}
                     <div class="text-danger">
                         {{ form.email.errors.0 }}
@@ -42,29 +41,8 @@
                     
           <div class="linha">
             <div class="label-input" style="flex:5;">
-              <label for="password1">Senha*:</label>
-              {{ form.password1 }}
-              {% if form.password1.errors %}
-                  <div class="text-danger">
-                      {{ form.password1.errors.0 }}
-                  </div>
-              {% endif %}
-            </div>
-              <div class="label-input" style="flex:5;">
-                <label for="password2">Confirme a Senha*:</label>
-                {{ form.password2 }}
-                {% if form.password2.errors %}
-                    <div class="text-danger">
-                        {{ form.password2.errors.0 }}
-                    </div>
-                {% endif %}
-              </div>
-          </div>
-                    
-          <div class="linha">
-            <div class="label-input" style="flex:5;">
                 <label class="label_idade" for="idade">Idade:</label>
-                {{ form.idade }}
+                <input type="text" name="idade" id="idade" class="textInput" value="{{ user.idade }}">
                 {% if form.idade.errors %}
                     <div class="text-danger">
                         {{ form.idade.errors.0 }}
@@ -74,7 +52,11 @@
             <div class="linha_2">
               <div class="label-input-sexo" style="flex:5;">
                   <label id="label_sexo" for="sexo">Sexo:</label>
-                  {{ form.sexo }}
+                  <select id="id_sexo" name="sexo">
+                    {% for value, display in form.sexo.field.choices %}
+                      <option value="{{ value }}" {% if user.sexo == value %}selected{% endif %}>{{ display }}</option>
+                    {% endfor %}
+                  </select>
                   {% if form.sexo.errors %}
                       <div class="text-danger">
                           {{ form.sexo.errors.0 }}

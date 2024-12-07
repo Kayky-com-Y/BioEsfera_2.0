@@ -95,6 +95,8 @@ main div {
   line-height: normal;
 }
 #Btn_cadastro {
+  text-align: center;
+  padding-top: 1.25%;
   border-radius: 5px;
   background: var(--past_orange);
   width: 160px;

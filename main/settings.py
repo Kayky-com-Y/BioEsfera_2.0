@@ -131,5 +131,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 AUTH_USER_MODEL = 'BioEsfera.Usuario'
-LOGIN_URL = 'BioEsfera:login'
-LOGOUT_REDIRECT_URL = 'BioEsfera:login'
+LOGIN_URL = 'login'
+LOGOUT_REDIRECT_URL = 'login'

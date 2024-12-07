@@ -11,23 +11,12 @@
 }
 body {
   background-color: var(--dark_green);
-  margin: 0;
   padding: 0;
   width: 100%;
 }
-
-section {
-  width: 991px;
-  margin: auto;
-  text-align: center;
-  height: 1277px;
+.div_principal{
+  margin-left: 10vw;
 }
-
-::selection {
-  color: var(--past_orange);
-  background: var(--lite_yellow);
-}
-
 .inicio {
   height: 29px;
   border-bottom: 2px;
@@ -116,4 +105,38 @@ iframe {
   display: block;
   margin: 66px 0 0 750px;
   z-index: 3;
+}
+
+
+.div_medalhas{
+  border-radius: 25px;
+  border: 0.5px solid rgb(151, 154, 43);
+  width: 13vw;
+  height: 18vw;
+  margin: 0.5vw;
+}
+
+.img_conquista{
+  width: 7vw;
+  height: 7vw;
+  padding-left: 1vw;
+  padding-top: 1vw;
+}
+p{
+  font-family:"Poppins", sans-serif;
+}
+
+.p_titulo{
+  font-size: 17px;
+  text-align: center;
+  color: white;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+.p_dica{
+  color: #8F8F8F;
+  margin-top: 2px;
+  font-size: 13px;
+  text-align: center;
 }

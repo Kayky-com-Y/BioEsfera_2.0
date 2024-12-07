@@ -1,0 +1,91 @@
+body{
+    background-color: rgb(151, 154, 43);
+    height: 100%;
+    height: 100%;
+}
+
+main{
+    position: relative;
+    background-color: #454D11;
+    margin: auto;
+    width: 84vw;
+    height: 80vw;
+}
+
+.div_conquistas{
+    margin: auto;
+    width: 70vw;
+    display: flex;
+    margin-top: 2vw;
+}
+
+.div_medalhas{
+    border-radius: 25px;
+    border: 0.5px solid rgb(151, 154, 43);
+    width: 12.5vw;
+    height: 15vw;
+    margin: 0.5vw;
+}
+
+.img_conquista{
+    width: 7vw;
+    height: 7vw;
+    padding-left: 3vw;
+    padding-top: 1vw;
+}
+p{
+    font-family:"Poppins", sans-serif;
+}
+
+.p_medalhas{
+    position: absolute;
+    color: white;
+    margin-top: -1.5vw;
+    margin-left: 10vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    font-size: 39px;
+    background-color: #454D11;
+}
+
+.p_titulo{
+    font-size: 17px;
+    text-align: center;
+    color: white;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.p_dica{
+    color: #8F8F8F;
+    margin-top: 2px;
+    font-size: 13px;
+    text-align: center;
+}
+.div_borderFoo {
+    margin-top: 4vw;
+    border-bottom: 0.5vh dashed rgb(151, 154, 43);
+    display: block;
+    position: relative;
+    z-index: 5;
+    margin-bottom: 5vw;
+  }
+
+  #Btn1 {
+    font-size: large;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+#Btn2 {
+    font-size: large;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }

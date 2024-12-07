@@ -1,36 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var openModalBtn0 = document.getElementById("botaoFase0");
-  var openModalBtn1 = document.getElementById("botaoFase1");
+  // Selecionar todos os botões e modais
+  var botaoFases = document.querySelectorAll("[id^='botaoFase']");
+  var modals = document.querySelectorAll(".modal");
+  var closes = document.querySelectorAll(".close");
 
-  var modal0 = document.getElementById("modal0");
-  var modal1 = document.getElementById("modal1");
-
-  var closeModalSpan0 = document.getElementsByClassName("close")[0];
-  var closeModalSpan1 = document.getElementsByClassName("close")[1];
-
-  openModalBtn0.addEventListener("click", function () {
-    modal0.style.display = "block";
+  // Adicionar event listeners aos botões para abrir os modais
+  botaoFases.forEach(function (botao, index) {
+    botao.addEventListener("click", function () {
+      modals[index].style.display = "flex";  // Usar flex para centralização
+      document.body.classList.add("modal-open");  // Desativar rolagem do body
+    });
   });
 
-  openModalBtn1.addEventListener("click", function () {
-    modal1.style.display = "block";
+  // Adicionar event listeners aos botões de fechar para fechar os modais
+  closes.forEach(function (close, index) {
+    close.addEventListener("click", function () {
+      modals[index].style.display = "none";
+      document.body.classList.remove("modal-open");  // Reativar rolagem do body
+    });
   });
 
-  closeModalSpan0.addEventListener("click", function () {
-    modal0.style.display = "none";
-  });
-
-  closeModalSpan1.addEventListener("click", function () {
-    modal1.style.display = "none";
-  });
-
+  // Fechar o modal ao clicar fora dele
   window.addEventListener("click", function (event) {
-    if (event.target == modal0) {
-      modal0.style.display = "none";
-    }
-
-    if (event.target == modal1) {
-      modal1.style.display = "none";
-    }
+    modals.forEach(function (modal) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");  // Reativar rolagem do body
+      }
+    });
   });
 });

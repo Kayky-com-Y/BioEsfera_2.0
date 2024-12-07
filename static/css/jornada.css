@@ -42,6 +42,8 @@ main {
 }
 
 #jornada button {
+  position: relative;
+  padding: 10px;
   margin: 5%;
   z-index: 1;
   color: transparent;
@@ -53,10 +55,9 @@ main {
   position: absolute;
   width: auto;
   top: 50%;
-  left: 60vw;
+  left: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  margin: 10vw 10vh;
   justify-content: center;
   z-index: 0;
 }
@@ -90,25 +91,29 @@ main {
 .modal {
   display: none;
   position: fixed;
-  width: 20vw;
-  height: 46vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 6;
 }
 
 .modal-content {
   background-color: var(--past_orange);
   margin: 15% auto;
-  padding: 20px;
   border: 1px solid var(--yellow);
-  width: 20vw;
   height: auto;
   border-radius: 27px;
   position: relative;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  max-width: 600px; /* Limita a largura máxima */
+  text-align: center;
 }
 .modal-content h2 {
   color: #fff;
@@ -120,7 +125,6 @@ main {
 }
 .modal-content > img {
   align-self: center;
-  width: 98%;
 }
 .modal-content p {
   color: var(--lite_yellow);
@@ -185,7 +189,9 @@ main {
     left: 98vw;
     transform: translate(-50%, -50%);
     object-fit: cover;
-    margin: 10vw 10vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 50%;
     justify-content: center;
     z-index: 0;
   }
@@ -228,4 +234,7 @@ main {
     display: flex;
     flex-direction: column;
   }
+}
+body.modal-open { 
+  overflow:hidden
 }
