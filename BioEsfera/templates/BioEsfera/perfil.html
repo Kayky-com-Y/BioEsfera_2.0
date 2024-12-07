@@ -3,17 +3,45 @@
 {% block parte_central %}
   <link rel="stylesheet" href="{% static 'css/perfil.css' %}" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
-  <script> 
-    function atualizarTituloConquista(conquistaId) { $.ajax({ url: `/atualizar_titulo_conquista/${conquistaId}/`, type: 'POST', headers: { 'X-CSRFToken': '{{ csrf_token }}' }, success: function(response) {if (response.status === 'success') { location.reload();} } }); } 
+  <script>
+    function atualizarConquistaUsuario(conquistaId) {
+        let username = "{{ user.username }}";  // Obtém o nome de usuário do contexto
+
+        $.ajax({
+            url: `/atualizar_conquista_usuario/${conquistaId}/`,
+            type: 'POST',
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            data: JSON.stringify({ username: username }),
+            contentType: 'application/json',
+            success: function(response) {
+                if (response.status === 'success') {
+                    location.reload();  // Recarregar a página após o sucesso
+                } else {
+                    alert('Falha ao atualizar a conquista do usuário.');
+                }
+            },
+            error: function() {
+                alert('Erro ao fazer a requisição.');
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        showAvatar(currentIndex);
+    });
   </script>
-    <script>
+  <script>
       let currentIndex = 0;
       let avatarIds = {{ avatar_ids|safe }};
       let avatarUrls = {{ avatar_urls|safe }};
+      let backgroundColors = ["rgb(151, 154, 43)","rgb(186, 95, 4)"];  // Array de cores
 
       function showAvatar(index) {
           $('#avatar-img').attr('src', avatarUrls[index]);
           $('#avatar-img').data('id', avatarIds[index]);
+          $('.div_avatar').css('background-color', backgroundColors[index]);  // Atualiza a cor de fundo
       }
 
       function prevAvatar() {
@@ -51,13 +79,18 @@
           showAvatar(currentIndex);
       });
   </script>
+
+
   <main>
+    <div class="div_main">
+      <div class="div_plano_de_fundo"><img src="{% static 'images/Background.png' %}"></div>
+      <div class="div_sombra"></div>
+    </div>
     <div class="div_central">
 
       <div class="div_cabecalho">
         <div class="div_img">
-          <img src="{% static 'SVG/photografh.svg' %}" class="img_local">
-          <img src= {{user.avatar.url}} class="img_usuario">
+          <img src={{user.avatar.url}} class="img_local">
         
         </div>
         <div class="div_dados">
@@ -65,12 +98,18 @@
             <p class="p_titulo">{{user.titulo_conquista}}</p>
           </div>
           <p class="p_nome">{{user.username}}</p>
-          <p class="p_nome_real">{{user.nome}}oi</p>
+          <p class="p_nome_real">{{user.nome}}</p>
           <p class="p_email">{{user.email}}</p>
         </div>
         <div class="div_modificar">
-          <div class="div_atualizar"><a href="{% url 'login'%}" class="a_atualizar">ATUALIZAR</a></div>
-          <div class="div_sair"><a href="{% url 'login'%}" class="a_sair">SAIR</a></div>
+          <form action="{% url 'delete_user' %}" method="post" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" style="border: none; background: none; padding: 0;">
+                <img src="{% static 'images/lixeira.png' %}" alt="Deletar Usuário" class="imagem_lixeira" />
+            </button>
+          </form>        
+          <div class="div_atualizar"><a href="{% url 'atualizar_dados'%}" class="a_atualizar">ATUALIZAR</a></div>
+          <div class="div_sair"><a href="{% url 'logout'%}" class="a_sair">SAIR</a></div>
         </div>
       </div>
 
@@ -84,18 +123,33 @@
             <p class="p_conquistas">Conquistas:</p>
             <div class="div_medalhas">
               {% for conquista_usuario in conquistas %}
-              <img src={{conquista_usuario.conquista.imagem.url}} class="img_medalha"alt="{{ conquista_usuario.conquista.titulo }}" onclick="atualizarTituloConquista({{ conquista_usuario.conquista.id }})">
-            {% endfor %}
+                <img src={{conquista_usuario.conquista.imagem.url}} class="img_medalha" alt="{{ conquista_usuario.conquista.titulo }}" onclick="atualizarConquistaUsuario({{ conquista_usuario.conquista.id }});">
+              {% endfor %}
+            </div>
+            <div class="div_paginacao">
+              <span class="step-links">
+                  {% if page_obj.has_previous %}
+                      <a class= "a_ceta" href="?page={{ page_obj.previous_page_number }}"><</a>
+                  {% endif %}
+  
+                  <span class="current">
+                      {{ page_obj.number }}
+                  </span>
+  
+                  {% if page_obj.has_next %}
+                      <a class= "a_ceta" href="?page={{ page_obj.next_page_number }}">></a>
+                  {% endif %}
+              </span>
             </div>
           </div>
         </div>
         <div class="div_inferior">
-          <div class="div_calendario">
-            
+          <div class="div_conquista_descricao">
+            <p class="p_conquista_descricao">{{ user.descricao_conquista }}</p>
           </div>
           <div class="div_avatar">
             <img class="img_anterior" alt="Anterior" src="{% static 'images/ceta_anterior.png' %}" onclick="prevAvatar()">
-            <img id="avatar-img" class="img_avatar" alt="Atualizar Avatar" data-id="" src={{user.avatar.url}} onclick="updateAvatar()">
+            <img id="avatar-img" class="img_avatar" alt="Atualizar Avatar" data-id="" src="{% static 'images/cebolo_avatar.png' %}" onclick="updateAvatar()">
             <img class="img_posterior" alt="Próximo" src="{% static 'images/ceta_posterior.png'%}" onclick="nextAvatar()">
           </div>
         </div>
@@ -103,5 +157,4 @@
       </div>
     </div>
   </main>
-
-{% endblock %}
+{%endblock%}

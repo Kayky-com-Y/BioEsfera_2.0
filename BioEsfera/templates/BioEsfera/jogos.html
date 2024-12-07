@@ -15,34 +15,39 @@
       rel="stylesheet"
     />
   </head>
+    <div class="div_principal">
+      <div id="espaçamento">
+        <div class="inicio"></div>
+        <p class="letreiros">{{jogo.titulo}}</p>
+        <div class="fim"></div>
+      </div>
+      <div>
+        <p class="texto">
+          <span class="texto_destaque">{{jogo.descricao}}
+        </p>
 
-    <div id="espaçamento">
-      <div class="inicio"></div>
-      <p class="letreiros">{{jogo.titulo}}</p>
-      <div class="fim"></div>
+        <iframe
+          width="1031"
+          height="581"
+          src={{jogo.url}}
+          title="DNA, ácidos nucleicos"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; cross-origin-isolated"
+          allowfullscreen
+          Cross-Origin-Embedder-Policy: require-corp
+        ></iframe>
+
+        <p class="subtexto">
+          Jogo feito em Godot e codigos disponiveis em
+        </p>
+        <p class="subtexto">github.com/Kayky-com-Y/DNA_Bioesfera</p>
+        {% for conquista in conquistas %}
+          <div class="div_medalhas">
+            <img class="img_conquista" src={{conquista.imagem.url}}>
+            <p class="p_titulo">{{conquista.titulo}}</p>
+            <p class="p_dica">{{conquista.dica}}</p>
+          </div>
+        {% endfor %}
+      </div>
     </div>
-
-    <section>
-      <p class="texto">
-        <span class="texto_destaque">{{jogo.descricao}}
-      </p>
-
-      <iframe
-        width="1031"
-        height="581"
-        src={{jogo.url}}
-        title="DNA, ácidos nucleicos"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; cross-origin-isolated"
-        allowfullscreen
-        Cross-Origin-Embedder-Policy: require-corp
-      ></iframe>
-
-      <p class="subtexto">
-        Jogo feito em Godot e codigos disponiveis em
-      </p>
-      <p class="subtexto">github.com/Kayky-com-Y/DNA_Bioesfera</p>
-    </section>
-    <script src="{% static 'javascript/botao_navegar.js' %}"></script>
-
 {% endblock %}

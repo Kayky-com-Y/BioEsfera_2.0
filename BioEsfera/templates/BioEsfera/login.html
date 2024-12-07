@@ -6,22 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro</title>
     <link rel="icon" type="image/x-icon" href="{% static 'images/PBioEsfera.png' %}">
-    <link rel="stylesheet" href="{% static 'css/general.css' %}">
     <link rel="stylesheet" href="{% static 'css/cadastro.css' %}" />
   </head>
   <body>
     <header>
-      <button id="BtnV">Voltar</button>
+      <a id="BtnV" href="{% url 'index' %}">Voltar</a>
     </header>
     <main>
       <div class="container">
-        <h1>Cadastrar</h1>
+        <h1>Entrar</h1>
 
         <form method="POST" id="cadastrarForm">
           {% csrf_token %}
           <div class="linha">
             <div class="label-input" style="flex:5;">
-                <label for="username">nome de usuario:</label>
+                <label for="username">Nome de usuario*:</label>
                 <input type="text" name="username" id="username" class="textInput" maxlength="11" required>
             </div>
           </div>
@@ -29,12 +28,6 @@
             <div class="label-input" style="flex:5;">
                 <label for="password">Senha*:</label>
                 <input type="password" name="password" id="password" class="textInput" required>
-          </div>
-          <div class="linha">
-            <div class="label-input" style="flex:5;">
-                <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" class="textInput" required>
-            </div>
           </div>
 
         {% if messages %}
@@ -45,12 +38,10 @@
           </div>
         {% endif %}
 
-          <button type="submit" class="btn btn-primary btn-block">Fazer login</button>
+          <button type="submit" class="button_enviar">Fazer login</button>
         </form>
       </div>
 
     </main>
-    <script src="{% static 'javascript/btnVoltar.js' %}"></script>
-    <script src="{% static 'javascript/submeter_cadastro.js' %}"></script>
   </body>
 </html>
